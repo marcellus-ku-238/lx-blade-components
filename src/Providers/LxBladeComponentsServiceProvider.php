@@ -39,7 +39,7 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__.'/../resources/views/components' => resource_path('views/components/'),
+            __DIR__.'/../resources/views/components' => resource_path('views/components/lx'),
         ], 'lx-views');
     }
 
