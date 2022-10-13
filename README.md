@@ -6,6 +6,7 @@ Laravel x-blade components is library that give you support for html based blade
 [![CI Status](https://github.com/sebastianbergmann/phpunit/workflows/CI/badge.svg?branch=main&event=push)](https://phpunit.de/build-status.html)
 [![Type Coverage](https://shepherd.dev/github/sebastianbergmann/phpunit/coverage.svg)](https://shepherd.dev/github/sebastianbergmann/phpunit)
 
+
 ## Installation
 
 You can install the package via composer:
