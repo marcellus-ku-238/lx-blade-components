@@ -2,13 +2,7 @@
 
 namespace Parth1895\LxBladeComponents\Console\Commands;
 
-use Exception;
 use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Str;
-use RuntimeException;
-use Symfony\Component\Process\PhpExecutableFinder;
-use Symfony\Component\Process\Process;
 
 class InstallCommand extends Command
 {
@@ -33,22 +27,6 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        // Publish...
         $this->callSilent('vendor:publish', ['--tag' => 'lx-views', '--force' => true]);
     }
-
-
-    /**
-     * Replace a given string within a given file.
-     *
-     * @param  string  $search
-     * @param  string  $replace
-     * @param  string  $path
-     * @return void
-     */
-    protected function replaceInFile($search, $replace, $path)
-    {
-        file_put_contents($path, str_replace($search, $replace, file_get_contents($path)));
-    }
-
 }
