@@ -11,6 +11,11 @@ use Illuminate\View\Compilers\BladeCompiler;
 
 class LxBladeComponentsServiceProvider extends ServiceProvider
 {
+    public function register()
+    {
+        $this->configureComponents();
+    }
+
     public function boot(): void
     {
         $this->configureComponents();
