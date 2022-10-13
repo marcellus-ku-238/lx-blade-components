@@ -57,6 +57,6 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
      */
     protected function registerComponent(string $component)
     {
-        Blade::component('lx-blade-components::components.'.$component, 'lx-'.$component);
+        Blade::component('lx-blade-components::components.'.$component, $component);
     }
 }
