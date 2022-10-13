@@ -15,5 +15,11 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Barryvdh\\Debugbar\\ServiceProvider"
+            ]
+        }
+    }
 }
