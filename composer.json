@@ -21,5 +21,8 @@
                 "Parth1895\\LxBladeComponents\\Providers\\LxBladeComponentsServiceProvider"
             ]
         }
+    },
+    "require": {
+        "illuminate/support": "^9.35"
     }
 }
