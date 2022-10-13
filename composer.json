@@ -11,7 +11,8 @@
     "authors": [
         {
             "name": "Parth Gajjar",
-            "email": "gajjar.parth1811@gmail.com"
+            "email": "gajjar.parth1811@gmail.com",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "stable",
@@ -26,5 +27,8 @@
         "illuminate/support": "^9.35",
         "illuminate/view": "^9.35",
         "illuminate/console": "^9.35"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }
