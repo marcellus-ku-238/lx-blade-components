@@ -28,8 +28,9 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $this->callSilent('vendor:publish', ['--tag' => 'lx-views', '--force' => true]);
-        $this->output->writeln(PHP_EOL.'<bg=blue;fg=black> INFO </> '. 'Publishing [lx-views] assets.'. PHP_EOL . PHP_EOL .'   Copying directory [vendor/parth1895/lxbladecomponents/resources/views] to [resources/views/components/lx] .......................................... DONE' .PHP_EOL);
+        // $this->callSilent('vendor:publish', ['--tag' => 'lx-views', '--force' => true]);
+        // $this->output->writeln(PHP_EOL.'<bg=blue;fg=black> INFO </> '. 'Publishing [lx-views] assets.'. PHP_EOL .'   Copying directory [vendor/parth1895/lxbladecomponents/resources/views] to [resources/views/components/lx] .......................................... DONE' .PHP_EOL);
+        copy(__DIR__.'/../resources/views/components/*', app_path('resources/views/components/lx'));
     }
 
     public function __construct()
