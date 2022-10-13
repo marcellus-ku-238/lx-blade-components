@@ -34,7 +34,7 @@ class InstallCommand extends Command
     public function handle()
     {
         // Publish...
-        $this->callSilent('vendor:publish', ['--tag' => 'ls-views', '--force' => true]);
+        $this->callSilent('vendor:publish', ['--tag' => 'lx-views', '--force' => true]);
     }
 
 

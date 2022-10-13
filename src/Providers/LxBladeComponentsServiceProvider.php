@@ -23,6 +23,18 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'lx');
 
         $this->configureComponents();
+        $this->configurePublishing();
+
+    }
+    protected function configurePublishing()
+    {
+        if (! $this->app->runningInConsole()) {
+            return;
+        }
+
+        $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('views/vendor/lx'),
+        ], 'lx-views');
     }
 
     /**
