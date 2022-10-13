@@ -1,0 +1,19 @@
+{
+    "name": "parth1896/lx-blade-components",
+    "description": "Laravel x-blade components is library that give you support for html based blade components.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Parth1896\\LxBladeComponents\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Parth Gajjar",
+            "email": "gajjar.parth1811@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
