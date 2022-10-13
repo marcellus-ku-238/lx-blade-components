@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Jetstream\Console\Commands;
+namespace Parth1895\LxBladeComponents\Console\Commands;
 
 use Exception;
 use Illuminate\Console\Command;

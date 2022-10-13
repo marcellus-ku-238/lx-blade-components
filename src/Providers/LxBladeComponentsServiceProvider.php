@@ -7,7 +7,7 @@ namespace Parth1895\LxBladeComponents\Providers;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
-use Laravel\Jetstream\Console\Commands\InstallCommand;
+use Parth1895\LxBladeComponents\Console\Commands\InstallCommand;
 
 class LxBladeComponentsServiceProvider extends ServiceProvider
 {
