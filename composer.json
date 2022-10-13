@@ -5,7 +5,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Parth1896\\LxBladeComponents\\": "src/"
+            "Parth1895\\LxBladeComponents\\": "src/"
         }
     },
     "authors": [
