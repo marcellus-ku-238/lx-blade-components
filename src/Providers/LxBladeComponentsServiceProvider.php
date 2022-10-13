@@ -29,7 +29,7 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
     protected function configureComponents()
     {
         $this->callAfterResolving(BladeCompiler::class, function () {
-            $this->registerComponent('input');
+            $this->registerComponent('input.tailwind');
         });
     }
 
