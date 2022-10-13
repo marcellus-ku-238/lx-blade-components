@@ -6,12 +6,36 @@ namespace Parth1895\LxBladeComponents\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\View\Compilers\BladeCompiler;
 
 
 class LxBladeComponentsServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        Blade::componentNamespace('Parth1895\\LxBladeComponents\\Resources\\Views\\Components\\Input', 'inputTest');
+        $this->configureComponents();
+    }
+
+    /**
+     * Configure the LX Blade components.
+     *
+     * @return void
+     */
+    protected function configureComponents()
+    {
+        $this->callAfterResolving(BladeCompiler::class, function () {
+            $this->registerComponent('input');
+        });
+    }
+
+    /**
+     * Register the given component.
+     *
+     * @param  string  $component
+     * @return void
+     */
+    protected function registerComponent(string $component)
+    {
+        Blade::component('lx-blade-components::components.'.$component, 'lx-'.$component);
     }
 }
