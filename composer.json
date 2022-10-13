@@ -24,6 +24,7 @@
     },
     "require": {
         "illuminate/support": "^9.35",
-        "illuminate/view": "^9.35"
+        "illuminate/view": "^9.35",
+        "illuminate/console": "^9.35"
     }
 }
