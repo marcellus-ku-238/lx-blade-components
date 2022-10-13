@@ -27,7 +27,10 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $this->callSilent('vendor:publish', ['--tag' => 'lx-views', '--force' => true]);
+        // $this->run('vendor:publish', ['--tag' => 'lx-views', '--force' => true]);
+        $this->publishes([
+            __DIR__.'/../resources/views/components' => resource_path('views/components/lx'),
+        ], 'lx-views');
     }
 
     public function __construct()
