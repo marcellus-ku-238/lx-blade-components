@@ -3,6 +3,7 @@
 namespace Parth1895\LxBladeComponents\Console\Commands;
 
 use Illuminate\Console\Command;
+use Symfony\Component\Process\Process;
 
 class InstallCommand extends Command
 {
@@ -27,10 +28,8 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        // $this->run('vendor:publish', ['--tag' => 'lx-views', '--force' => true]);
-        $this->publishes([
-            __DIR__.'/../resources/views/components' => resource_path('views/components/lx'),
-        ], 'lx-views');
+        $this->callSilent('vendor:publish', ['--tag' => 'lx-views', '--force' => true]);
+        $this->output->writeln('  <bg=yellow;fg=black> WARN </> '. 'Yuppir got it' .PHP_EOL);
     }
 
     public function __construct()
