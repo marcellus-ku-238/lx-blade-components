@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SevenSpan\WhatsApp\Providers;
+namespace Parth1895\LxBladeComponents\Providers;
 
 use SevenSpan\WhatsApp\WhatsApp;
 use Illuminate\Support\ServiceProvider;
