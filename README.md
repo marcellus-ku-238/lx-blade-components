@@ -14,3 +14,11 @@ You can install the package via composer:
 ```bash
 composer require parth1895/lx-blade-components
 ```
+
+## Credits
+
+- [Parth Gajjar](https://github.com/parth1895)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
