@@ -21,7 +21,7 @@ You can publish the views artisan command,
 ```bash
 php artisan lx:install
 ```
-Note: With out publish component not load html
+Note: Without publish component html could not load, take a note of that.
 
 ## Credits
 
