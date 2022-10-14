@@ -15,6 +15,14 @@ You can install the package via composer:
 composer require parth1895/lx-blade-components
 ```
 
+## Publish Views
+You can publish the views via composer:
+
+```bash
+php artisan lx:install
+```
+Note: With out publish component not load html
+
 ## Credits
 
 - [Parth Gajjar](https://github.com/parth1895)
