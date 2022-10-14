@@ -13,8 +13,12 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views/components', 'lx');
+//        $this->loadViewsFrom(__DIR__.'/../resources/views/components', 'lx');
 
+        $this->publishes([
+            __DIR__.'/../resources/views/components' => public_path('lx/components'),
+        ], 'lx');
+    
         $this->configureComponents();
     }
 
@@ -52,6 +56,7 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
     {
         $this->callAfterResolving(BladeCompiler::class, function () {
             $this->registerComponent('input');
+            $this->registerComponent('label');
         });
     }
 
