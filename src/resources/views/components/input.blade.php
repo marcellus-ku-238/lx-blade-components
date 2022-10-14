@@ -1,8 +1,7 @@
 @props(['disabled' => false])
 
 <input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge([
-    'class' =>
-        (Arr::has($attributes, 'class')) ? $attributes['class'] : 'h-10 border border-gray-300 bg-gray-100 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm',
+    'class' => 'h-10 border border-gray-300 bg-gray-100 rounded-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm',
 ]) !!}>
 
 @if (Arr::has($attributes, 'wire:model'))
