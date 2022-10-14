@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Parth1895\LxBladeComponents\Providers;
 
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
 use Parth1895\LxBladeComponents\Console\Commands\InstallCommand;
@@ -13,14 +14,14 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views/components', 'lx');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lx');
 
         $this->configureComponents();
     }
 
     public function boot(): void
-    {
-        $this->loadViewsFrom(__DIR__.'/../resources/views/components', 'lx');
+    {   
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lx');
 
         $this->configureComponents();
         $this->configurePublishing();
@@ -32,6 +33,7 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
         }
     
     }
+
     protected function configurePublishing()
     {
         if (! $this->app->runningInConsole()) {
@@ -64,6 +66,6 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
      */
     protected function registerComponent(string $component)
     {
-        Blade::component('components.'.$component, $component);
+        Blade::component('lx::components.'.$component, $component);
     }
 }
