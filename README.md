@@ -16,7 +16,7 @@ composer require parth1895/lx-blade-components
 ```
 
 ## Publish Views
-You can publish the views via composer:
+You can publish the views artisan command,
 
 ```bash
 php artisan lx:install
