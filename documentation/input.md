@@ -4,7 +4,7 @@ This component give you html with tailwind classes when you need to show input t
 You just need to copy below tag and paste at place you want to show input,
 
 ```bash
-<x-lx.form-inputs.input wire:model="wireKey" name="first-name" id="first-name" placeholder="Enter name"/>
+<x-lx.form-inputs.input color="green" wire:model="firstName" name="first-name" id="first-name" placeholder="Enter name"/>
 ```
 
 
