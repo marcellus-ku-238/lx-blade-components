@@ -1,4 +1,4 @@
-# TextArea component
+# Textarea component
 This component give you html with tailwind classes when you need to show text-area to your page.
 
 
