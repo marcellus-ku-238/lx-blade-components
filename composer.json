@@ -1,6 +1,6 @@
 {
     "name": "parth1895/lx-blade-components",
-    "description": "Laravel x-blade components is library that give you support for html based blade components.",
+    "description": "Laravel x-blade components is a component library built with Tailwind CSS",
     "type": "library",
     "license": "MIT",
     "autoload": {

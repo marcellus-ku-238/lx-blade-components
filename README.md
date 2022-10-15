@@ -1,11 +1,5 @@
 # lx-blade-components
-Laravel x-blade components is library that give you support for html based blade components.
-
-[![Latest Stable Version](https://img.shields.io/packagist/v/phpunit/phpunit.svg?style=flat-square)](https://packagist.org/packages/phpunit/phpunit)
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.1-8892BF.svg?style=flat-square)](https://php.net/)
-[![CI Status](https://github.com/sebastianbergmann/phpunit/workflows/CI/badge.svg?branch=main&event=push)](https://phpunit.de/build-status.html)
-[![Type Coverage](https://shepherd.dev/github/sebastianbergmann/phpunit/coverage.svg)](https://shepherd.dev/github/sebastianbergmann/phpunit)
-
+Laravel x-blade components is a component library built with Tailwind CSS.
 
 ## Installation
 
@@ -23,8 +17,16 @@ php artisan lx:install
 ```
 Note: Without publish component html could not load, take a note of that.
 
-## Credits
+List of Components:
 
+- Button
+- Field
+- Input
+- Textbox
+- Select
+- Choice
+
+## Credits
 - [Parth Gajjar](https://github.com/parth1895)
 
 ## License
