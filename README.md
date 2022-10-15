@@ -1,5 +1,5 @@
 # lx-blade-components
-Laravel x-blade components is a component library built with Tailwind CSS.
+Laravel x-blade components is a component library built to support livewire and tailwind based project.
 
 ## Installation
 
@@ -19,12 +19,20 @@ Note: Without publish component html could not load, take a note of that.
 
 List of Components:
 
-- Button
-- Field
-- Input
-- Textbox
-- Select
-- Choice
+- Action
+    - Banner
+- Buttons
+    - Button
+    - Submit button
+    - Switch
+- Form-inputs
+    - Checkbox
+    - Input
+    - Label
+    - Radio
+    - Select
+    - Textarea
+- Validation-errors
 
 ## Credits
 - [Parth Gajjar](https://github.com/parth1895)
