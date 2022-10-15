@@ -2,7 +2,6 @@
     'color' => 'indigo',
 ])
 
-
 <div x-data='{
     open: false
 }'>

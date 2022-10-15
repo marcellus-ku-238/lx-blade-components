@@ -1,7 +1,10 @@
-@props(['disabled' => false])
+@props([
+    'disabled' => false,
+    'color' => 'indigo',
+])
 
 <input type="checkbox" {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge([
-    'class' => 'focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded',
+    'class' => 'focus:ring-' . $color . '-500 h-4 w-4 text-' . $color . '-600 border-gray-300 rounded',
 ]) !!}>
 
 @if (Arr::has($attributes, 'wire:model'))
