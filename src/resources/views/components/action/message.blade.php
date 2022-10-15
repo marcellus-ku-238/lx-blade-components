@@ -1,9 +1,12 @@
-@props(['type' => 'success', 'message' => 'Operation completed successfully.'])
+@props(['type' => 'success', 'autoHide' => false, 'message' => 'Operation completed successfully.'])
 
 <div x-data="{
     open: true,
+    autoHide: '{{ $autoHide }}'
     init() {
-        setTimeout(() => this.open = false, 1200)
+        if (this.autoHide == true) {
+            setTimeout(() => this.open = false, 1200)
+        }
     }
 }">
     <div @class([
