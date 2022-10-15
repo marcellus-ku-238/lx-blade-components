@@ -2,7 +2,7 @@
 This component give you html with tailwind classes when you need to show label to your page.
 
 
-You just need to copy below tag and paste at place you want to show labele,
+You just need to copy below tag and paste at place you want to show label,
 
 ```bash
 <x-lx.form-inputs.label for="label" :value="'Label Text'" />

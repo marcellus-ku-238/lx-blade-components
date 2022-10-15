@@ -26,8 +26,8 @@ List of Components:
     - [Submit button](documentation/submit-button.md)
     - [Switch](documentation/switch.md)
 - Form-inputs
-    - Label
-    - Input
+    - [Label](documentation/label.md)
+    - [Input]
     - Radio
     - Checkbox
     - Select
