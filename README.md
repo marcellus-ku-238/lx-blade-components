@@ -27,7 +27,7 @@ List of Components:
     - [Switch](documentation/switch.md)
 - Form-inputs
     - [Label](documentation/label.md)
-    - [Input]
+    - [Input](documentation/input.md)
     - Radio
     - Checkbox
     - Select
