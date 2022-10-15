@@ -1,4 +1,4 @@
-@props(['id', 'maxWidth'])
+@props(['id', 'maxWidth', 'show' => true])
 
 @php
 $id = $id ?? md5($attributes->wire('model'));
@@ -14,7 +14,7 @@ $maxWidth = [
 
 <div
     x-data="{
-        show: @entangle($attributes->wire('model')).defer,
+        show: '{{ $show ?? false }}',
         focusables() {
             // All focusable element types...
             let selector = 'a, button, input:not([type=\'hidden\']), textarea, select, details, [tabindex]:not([tabindex=\'-1\'])'
@@ -43,7 +43,7 @@ $maxWidth = [
     x-on:keydown.tab.prevent="$event.shiftKey || nextFocusable().focus()"
     x-on:keydown.shift.tab.prevent="prevFocusable().focus()"
     x-show="show"
-    id="{{ $id }}"
+    id="{{ str()->uuid() }}"
     class="jetstream-modal fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50"
     style="display: none;"
 >
