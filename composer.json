@@ -1,6 +1,13 @@
 {
     "name": "parth1895/lx-blade-components",
     "description": "Laravel x-blade components is a component library built with Tailwind CSS",
+    "keywords": [
+        "laravel",
+        "components",
+        "laravel-components",
+        "blade-components",
+        "x-blade-components"
+    ],
     "type": "library",
     "license": "MIT",
     "autoload": {
