@@ -26,10 +26,10 @@ List of Components:
     - [Submit button](documentation/submit-button.md)
     - [Switch](documentation/switch.md)
 - Form-inputs
-    - Checkbox
-    - Input
     - Label
+    - Input
     - Radio
+    - Checkbox
     - Select
     - Textarea
 - Validation-errors
