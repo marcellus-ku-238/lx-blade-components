@@ -1,9 +1,11 @@
-@props(['on'])
+@props(['type' => 'success'])
 
-<div x-data="{ shown: false, timeout: null }" x-init="@this.on('{{ $on }}', () => { clearTimeout(timeout);
-    shown = true;
-    timeout = setTimeout(() => { shown = false }, 2000); })" x-show.transition.out.opacity.duration.1500ms="shown"
-    x-transition:leave.opacity.duration.1500ms style="display: none;"
-    {{ $attributes->merge(['class' => 'text-sm text-gray-600']) }}>
-    {{ $slot->isEmpty() ? 'Data saved.' : $slot }}
+<div @class([
+    'text-green-400 bg-green-100' => $type == 'success',
+    'text-red-400 bg-red-100' => $type == 'failed',
+    'text-yellow-400 bg-yellow-100' => $type == 'warning',
+    'text-blue-400 bg-blue-100' => $type == 'info',
+    'text-sm p-3 font-bold rounded-md',
+])>
+    {{ $slot->isEmpty() ? 'Data saved successfully.' : $slot }}
 </div>
