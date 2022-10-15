@@ -24,7 +24,6 @@
             "role": "Developer"
         }
     ],
-    "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
@@ -39,5 +38,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
