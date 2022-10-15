@@ -22,7 +22,7 @@ List of Components:
 - Action
     - [Banner](documentation/banner.md)
 - Buttons
-    - Button
+    - [Button](documentation/button.md)
     - Submit button
     - Switch
 - Form-inputs
