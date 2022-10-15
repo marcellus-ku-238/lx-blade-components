@@ -1,6 +1,7 @@
 @props(['disabled' => false])
 
 <textarea {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge([
+    'rows' => '4',
     'class' =>
         'shadow-sm block w-full  focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md',
 ]) !!}>
