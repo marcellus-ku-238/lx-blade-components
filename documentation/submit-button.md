@@ -7,13 +7,13 @@ You just need to copy below tag and paste at place you want to show form-buttons
 ```bash
 <x-lx.buttons.submit-button>
     <x-slot name="submitBtn">
-        <x-lx.buttons.button class="font-bold">
+        <x-lx.buttons.button>
             Submit
         </x-lx.buttons.button>
     </x-slot>
 
     <x-slot name="cancelBtn">
-        <x-lx.buttons.button class="font-bold" color="red">
+        <x-lx.buttons.button>
             Cancel
         </x-lx.buttons.button>
     </x-slot>
