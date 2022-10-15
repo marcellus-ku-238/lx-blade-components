@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "marcellus-ku-238\\LxBladeComponents\\Providers\\LxBladeComponentsServiceProvider"
+                "MarcellusKu238\\LxBladeComponents\\Providers\\LxBladeComponentsServiceProvider"
             ]
         }
     },
