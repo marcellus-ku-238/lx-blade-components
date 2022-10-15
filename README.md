@@ -34,7 +34,7 @@ List of Components:
     - [Textarea](documentation/textarea.md)
 - [Validation-errors](documentation/validation-errors.md)
 
-## Credits
+## Contributers
 - [Parth Gajjar](https://github.com/parth1895)
 
 ## License
