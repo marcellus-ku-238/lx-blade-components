@@ -2,6 +2,13 @@
     'color' => 'indigo',
 ])
 
+<!--
+    NOTE: This component uses alpineJs to improve user interaction.
+          Please add alpineJS if you are using livewire 2.
+          If you are using livewire 3, you'll just install Livewire and 
+          everything you need is automatically injected - including Alpine!
+-->
+
 <div x-data='{
     open: false
 }'>
