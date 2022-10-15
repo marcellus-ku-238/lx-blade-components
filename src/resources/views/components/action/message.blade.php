@@ -1,4 +1,4 @@
-@props(['type' => 'success'])
+@props(['type' => 'success', 'message' => 'Operation completed successfully.'])
 
 <div @class([
     'text-green-400 bg-green-100' => $type == 'success',
@@ -7,5 +7,5 @@
     'text-blue-400 bg-blue-100' => $type == 'info',
     'text-sm p-3 font-bold rounded-md',
 ])>
-    {{ $slot->isEmpty() ? 'Data saved successfully.' : $slot }}
+    {{ $slot->isEmpty() ? $message : $slot }}
 </div>
