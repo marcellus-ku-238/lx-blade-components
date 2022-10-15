@@ -20,7 +20,7 @@ Note: Without publish component html could not load, take a note of that.
 List of Components:
 
 - Action
-    - Banner
+    - [Banner](documentation/banner.md)
 - Buttons
     - Button
     - Submit button
