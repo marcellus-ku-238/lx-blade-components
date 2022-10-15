@@ -4,9 +4,7 @@
 
 <button type="button" {!! $attributes->merge([
     'class' =>
-        'inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium font-bold rounded-md text-' .
-        $color .
-        ' bg-' .
+        'inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium font-bold rounded-md text-white bg-' .
         $color .
         '-600 hover:bg-' .
         $color .
