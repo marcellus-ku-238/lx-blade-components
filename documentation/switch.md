@@ -1,8 +1,8 @@
 # Switch component
-This component give you html for button for your project.
+This component give you html for switch for your project.
 
 
-You just need to copy below tag and paste at place you want to show button,
+You just need to copy below tag and paste at place you want to show switch,
 
 ```bash
 <x-lx.buttons.switch />
