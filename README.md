@@ -23,7 +23,7 @@ List of Components:
     - [Banner](documentation/banner.md)
 - Buttons
     - [Button](documentation/button.md)
-    - Submit button
+    - [Submit button](documentation/submit-button.md)
     - Switch
 - Form-inputs
     - Checkbox
