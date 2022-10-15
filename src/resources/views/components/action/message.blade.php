@@ -2,7 +2,7 @@
 
 <div x-data="{
     open: true,
-    autoHide: '{{ $autoHide }}'
+    autoHide: '{{ $autoHide }}',
     init() {
         if (this.autoHide == true) {
             setTimeout(() => this.open = false, 1200)
