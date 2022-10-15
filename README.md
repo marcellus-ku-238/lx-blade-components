@@ -24,7 +24,7 @@ List of Components:
 - Buttons
     - [Button](documentation/button.md)
     - [Submit button](documentation/submit-button.md)
-    - Switch
+    - [Switch](documentation/switch.md)
 - Form-inputs
     - Checkbox
     - Input
