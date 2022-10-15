@@ -1,4 +1,4 @@
-# Button component
+# Switch component
 This component give you html for button for your project.
 
 
