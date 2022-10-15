@@ -10,4 +10,4 @@ You just need to copy below tag and paste at place you want to show button,
 </x-lx.buttons.button>
 ```
 
-Go [Back](../README.md)
+Go to [Documentation](../README.md)

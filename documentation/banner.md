@@ -8,4 +8,4 @@ You just need to copy below tag and paste at place you want to show flash messag
 <x-lx.action.banner />
 ```
 
-Go [Back](../README.md)
+Go to [Documentation](../README.md)
