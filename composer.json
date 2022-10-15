@@ -8,6 +8,7 @@
         "blade-components",
         "x-blade-components"
     ],
+    "homepage": "https://github.com/parth1895/lx-blade-components",
     "type": "library",
     "license": "MIT",
     "autoload": {
