@@ -6,7 +6,7 @@ Laravel x-blade components is a component library built to support livewire and 
 You can install the package via composer:
 
 ```bash
-composer require parth1895/lx-blade-components
+composer require marcellus-ku-238/lx-blade-components
 ```
 
 ## Publish Views
@@ -35,7 +35,7 @@ List of Components:
 - [Validation-errors](documentation/validation-errors.md)
 
 ## Contributers
-- [Parth Gajjar](https://github.com/parth1895)
+- [Parth Gajjar](https://github.com/marcellus-ku-238)
 
 ## License
 

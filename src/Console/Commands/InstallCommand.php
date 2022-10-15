@@ -1,6 +1,6 @@
 <?php
 
-namespace Parth1895\LxBladeComponents\Console\Commands;
+namespace MarcellusKu238\LxBladeComponents\Console\Commands;
 
 use Illuminate\Console\Command;
 
