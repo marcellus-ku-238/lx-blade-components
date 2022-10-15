@@ -28,11 +28,11 @@ List of Components:
 - Form-inputs
     - [Label](documentation/label.md)
     - [Input](documentation/input.md)
-    - Radio
-    - Checkbox
-    - Select
-    - Textarea
-- Validation-errors
+    - [Radio](documentation/radio.md)
+    - [Checkbox](documentation/checkbox.md)
+    - [Select](documentation/select.md)
+    - [Textarea](documentation/textarea.md)
+- [Validation-errors](documentation/validation-errors.md)
 
 ## Credits
 - [Parth Gajjar](https://github.com/parth1895)
