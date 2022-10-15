@@ -8,7 +8,7 @@ You just need to copy below tag and paste at place you want to show button,
 <x-lx.buttons.switch />
 ```
 
-| :memo:        | We are using alpineJs to improve user expriance in this component. So alpinsJs must added to your project.       |
+| :memo:        | We are using alpineJs to improve user expriance in this component. So alpineJs must added to your project.       |
 |---------------|:------------------------|
  
 
