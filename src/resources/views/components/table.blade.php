@@ -1,11 +1,12 @@
-@props([
-    'tHead' => [],
-    'tBody' => [],
-])
-
-<div class="mt-6 mb-4 shadow ring-1 ring-black ring-opacity-5 md:mx-0 md:rounded-lg overflow-auto">
-    <table class="min-w-full divide-y divide-gray-300">
-        {{ $tHead }}
-        {{ $tBody }}
+<div class="align-middle min-w-full overflow-x-auto shadow overflow-hidden sm:rounded-lg">
+    <table class="min-w-full divide-y divide-gray-200">
+        <thead>
+            <tr>
+                {{ $head }}
+            </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+            {{ $body }}
+        </tbody>
     </table>
 </div>
