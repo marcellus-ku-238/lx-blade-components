@@ -150,8 +150,6 @@ class Index extends Component
 ```
 
 
-Result looks like as below,
-![Demo](./data-table.gif)
 
 
 Go to [Documentation](../README.md)
