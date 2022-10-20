@@ -4,7 +4,7 @@ This component give you html with tailwind classes when you need to show data-ta
 You just need to copy below tag and paste at place you want to show data-table,
 
 ```bash
-<x-lx.table :isSearch="'true'" :hasFilters="'true'"> // SET to TRUE only `isSearch` and `isFilters` want to use feature. 
+<x-lx.table :isSearch="'true'" :hasFilters="'true'"> // Want to use feature then only SET to TRUE  only `isSearch` and `isFilters` want to use feature. 
     <x-slot name="search">
         <x-lx.table.search :wireKey="'search'" :label="'Search user'" />
     </x-slot>
@@ -83,5 +83,71 @@ You just need to copy below tag and paste at place you want to show data-table,
 
 | :memo:        | We are using alpineJs so make sure that is added to your project.       |
 |---------------|:------------------------|
+
+
+
+Above is example for lisitng users into data-table,
+Let's take an example for php file of livewire component which helps you to implement backend logic for
+the same.
+
+```
+<?php
+
+namespace App\Http\Livewire\Admin\User;
+
+use App\Models\User;
+use Livewire\Component;
+use Livewire\WithPagination;
+
+class Index extends Component
+{
+    use WithPagination;
+
+    public $search;
+    public $sortField = 'name';
+    public $sortDirection = 'asc';
+    public $statusFilter; // Key by which you can run `where` query for filters.
+    public $statusFilters = [ // Values to show on HTML for filters.
+        'active',
+        'inactive'
+    ];
+    public $genderFilter;  // Key by which you can run `where` query for filters.
+    public $genderFilters = [ // Values to show on HTML for filters.
+        'male',
+        'female'
+    ];
+    
+    public function render()
+    {
+        $users = new User();
+        if (!empty($this->statusFilter)) {
+            $users = $users->where('status', $this->statusFilter);  
+        }
+
+        if (!empty($this->genderFilter)) {
+            $users = $users->where('gender', $this->genderFilter);  
+        }
+        return view('livewire.admin.user.index', [
+            'users' => $users->search($this->search)->orderBy($this->sortField, $this->sortDirection)->paginate(10),
+        ]);
+    }
+
+    public function sortBy($field)
+    {
+        $this->sortDirection = ($field == $this->sortField)
+            ? ($this->sortDirection = $this->sortDirection == 'asc' ? 'desc' : 'asc' ) : 'asc';
+        $this->sortField = $field;
+    }
+
+    public function clearFilters() // This function will clear all filter values from filters.
+    {
+        $this->reset([
+            'statusFilter',
+            'genderFilter'
+        ]);
+    }
+}
+```
+
 
 Go to [Documentation](../README.md)
