@@ -32,6 +32,7 @@ List of Components:
     - [Checkbox](documentation/checkbox.md)
     - [Select](documentation/select.md)
     - [Textarea](documentation/textarea.md)
+- [Data-table](documentation/data-table.md)
 - [Validation-errors](documentation/validation-errors.md)
 
 ## Contributers
