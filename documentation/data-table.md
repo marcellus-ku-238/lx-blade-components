@@ -4,7 +4,7 @@ This component give you html with tailwind classes when you need to show data-ta
 You just need to copy below tag and paste at place you want to show data-table,
 
 ```bash
-<x-lx.table :isSearch="'true'" :hasFilters="'true'"> <!-- SET to TRUE only `isSearch` and `isFilters` want to use feature.  -->
+<x-lx.table :isSearch="'true'" :hasFilters="'true'"> // SET to TRUE only `isSearch` and `isFilters` want to use feature. 
     <x-slot name="search">
         <x-lx.table.search :wireKey="'search'" :label="'Search user'" />
     </x-slot>
