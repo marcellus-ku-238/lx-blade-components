@@ -149,7 +149,7 @@ class Index extends Component
 }
 ```
 
-
+![Image](./images/data-table.gif)
 
 
 Go to [Documentation](../README.md)
