@@ -149,6 +149,8 @@ class Index extends Component
 }
 ```
 
+
+# Demo 
 ![Image](./images/data-table.gif)
 
 
