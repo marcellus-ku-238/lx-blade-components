@@ -90,7 +90,7 @@ Above is example for listing users into data-table,
 Let's take an example for php file of livewire component which helps you to implement backend logic for
 the same.
 
-```
+```php
 <?php
 
 namespace App\Http\Livewire\Admin\User;
