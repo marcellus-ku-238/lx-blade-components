@@ -132,7 +132,7 @@ class Index extends Component
         ]);
     }
 
-    public function sortBy($field)
+    public function sortBy($field) // Function for sorting data by column.
     {
         $this->sortDirection = ($field == $this->sortField)
             ? ($this->sortDirection = $this->sortDirection == 'asc' ? 'desc' : 'asc' ) : 'asc';
