@@ -149,8 +149,7 @@ class Index extends Component
 }
 ```
 
-```html
 <iframe frameBorder='0' width='640' height='360' webkitallowfullscreen mozallowfullscreen allowfullscreen src="https://www.awesomescreenshot.com/embed?id=11854785&shareKey=b385046de50adad1bd190daa2986dbbe"></iframe>
-```
+
 
 Go to [Documentation](../README.md)
