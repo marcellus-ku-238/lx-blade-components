@@ -14,14 +14,14 @@ class LxBladeComponentsServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lx');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', '');
 
         $this->configureComponents();
     }
 
     public function boot(): void
     {   
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'lx');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', '');
 
         $this->configureComponents();
         $this->configurePublishing();
