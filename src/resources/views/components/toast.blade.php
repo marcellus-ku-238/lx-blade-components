@@ -1,5 +1,7 @@
 @props([
-    'position' => 'left',
+    'position' => 'center',
+    'svg' => true,
+    'type' => 'warning',
 ])
 
 <div class="relative">
@@ -18,14 +20,36 @@
             x-transition:leave="transition ease-in-out duration-300"
             x-transition:leave-start="opacity-100 transform scale-x-100 -translate-x-0"
             x-transition:leave-end="opacity-0 transform scale-x-100 translate-x-16">
-            <div
-                class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6 text-green-400">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </div>
+            @if (!empty($svg))
+                <div @class([
+                    'inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg',
+                    'text-green-500 bg-green-100' => $type == 'success',
+                    'text-red-500 bg-red-100' => $type == 'failed',
+                    'text-blue-500 bg-blue-100' => $type == 'warning',
+                ])>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" @class([
+                            'w-6 h-6',
+                            'text-green-400' => $type == 'success',
+                            'text-red-400' => $type == 'failed',
+                            'text-blue-400' => $type == 'warning',
+                        ])>
+                        @if ($type == 'success')
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        @endif
+                        @if ($type == 'failed')
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        @endif
+                        @if ($type == 'warning')
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                        @endif
+                    </svg>
+                </div>
+            @endif
             <div x-text="message" class="ml-3 text-sm font-normal"></div>
             <button type="button" x-on:click="show = false"
                 class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 "
