@@ -8,7 +8,7 @@ You just need to copy below tag and paste at place you want to show toast-messag
 <x-toast />
 ```
 
-# Livewire allows you to fire browser window events like so,
+## Livewire allows you to fire browser window events like so,
 ```php
 $this->dispatchBrowserEvent('notify', 'Profile saved.');
 ```
