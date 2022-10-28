@@ -13,6 +13,9 @@ You just need to copy below tag and paste at place you want to show toast-messag
 $this->dispatchBrowserEvent('notify', 'Profile saved.');
 ```
 
-For more detail for go to this [Reference](https://laravel-livewire.com/docs/2.x/events)
+To learn more for events in laravel-livewire go to ([Reference])(https://laravel-livewire.com/docs/2.x/events)
+
+# Demo 
+![Image](./images/toast.gif)
 
 Go to [Documentation](../README.md)
