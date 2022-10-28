@@ -4,7 +4,7 @@
 ])
 
 <input type="checkbox" {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge([
-    'class' => 'focus:ring-{{ $color }}-500 h-4 w-4 text-{{ $color }}-600 border-gray-300 rounded',
+    'class' => 'focus:ring-' . $color . '-500 h-4 w-4 text-' . $color . '-600 border-gray-300 rounded',
 ]) !!}>
 
 @if (Arr::has($attributes, 'wire:model'))

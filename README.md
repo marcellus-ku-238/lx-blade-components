@@ -34,6 +34,10 @@ List of Components:
     - [Textarea](documentation/textarea.md)
 - [Data-table](documentation/data-table.md)
 - [Validation-errors](documentation/validation-errors.md)
+- [Badge](documentation/badge.md)
+- [Bread-crumbs](documentation/bread-crumbs.md)
+- [Nav-link](documentation/nav-link.md)
+- [Toast](documentation/toast.md)
 
 ## Contributers
 - [Parth Gajjar](https://github.com/marcellus-ku-238)

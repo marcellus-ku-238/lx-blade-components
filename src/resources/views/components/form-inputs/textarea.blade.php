@@ -5,8 +5,7 @@
 
 <textarea {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge([
     'rows' => '4',
-    'class' =>
-        'shadow-sm block w-full  focus:border-{{ $color }}-500 sm:text-sm border border-gray-300 rounded-md',
+    'class' => 'shadow-sm block w-full  focus:border-' . $color . '-500 sm:text-sm border border-gray-300 rounded-md',
 ]) !!}>
     {{ $slot }}
 </textarea>
