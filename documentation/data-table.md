@@ -4,34 +4,34 @@ This component give you html with tailwind classes when you need to show data-ta
 You just need to copy below tag and paste at place you want to show data-table,
 
 ```html
-<x-lx.table :isSearch="'true'" :hasFilters="'true'"> // Want to use feature then only SET to TRUE  only `isSearch` and `isFilters` want to use feature. 
+<x-table :isSearch="'true'" :hasFilters="'true'"> // Want to use feature then only SET to TRUE  only `isSearch` and `isFilters` want to use feature. 
     <x-slot name="search">
-        <x-lx.table.search :wireKey="'search'" :label="'Search user'" />
+        <x-table.search :wireKey="'search'" :label="'Search user'" />
     </x-slot>
     <x-slot name="filters">
         <div class="space-y-4">
             <div class="space-y-2">
-                <x-lx.form-inputs.label for="statusFilter" :value="'Status'" />
-                <x-lx.form-inputs.select wire:model="statusFilter" class="w-full h-10" id="statusFilter">
+                <x-form-inputs.label for="statusFilter" :value="'Status'" />
+                <x-form-inputs.select wire:model="statusFilter" class="w-full h-10" id="statusFilter">
                     <option value>Select Status</option>
                     @if (!empty($statusFilters))
                         @foreach ($statusFilters as $statusFilter)
                             <option value="{{ $statusFilter }}">{{ str()->ucfirst($statusFilter) }}</option>
                         @endforeach
                     @endif
-                </x-lx.form-inputs.select>
+                </x-form-inputs.select>
             </div>
 
             <div class="space-y-2">
-                <x-lx.form-inputs.label for="genderFilter" :value="'Gender'" />
-                <x-lx.form-inputs.select wire:model="genderFilter" class="w-full h-10" id="genderFilter">
+                <x-form-inputs.label for="genderFilter" :value="'Gender'" />
+                <x-form-inputs.select wire:model="genderFilter" class="w-full h-10" id="genderFilter">
                     <option value>Select Status</option>
                     @if (!empty($genderFilters))
                         @foreach ($genderFilters as $genderFilter)
                             <option value="{{ $genderFilter }}">{{ str()->ucfirst($genderFilter) }}</option>
                         @endforeach
                     @endif
-                </x-lx.form-inputs.select>
+                </x-form-inputs.select>
             </div>
         </div>
 
@@ -42,43 +42,43 @@ You just need to copy below tag and paste at place you want to show data-table,
     </x-slot>
 
     <x-slot name="head">
-        <x-lx.table.heading sortable wire:click="sortBy('name')" :direction="$sortField == 'name' ? $sortDirection : null">
+        <x-table.heading sortable wire:click="sortBy('name')" :direction="$sortField == 'name' ? $sortDirection : null">
         Name
-        </x-lx.table.heading>
-        <x-lx.table.heading>Email</x-lx.table.heading>
-        <x-lx.table.heading>Gender</x-lx.table.heading>
-        <x-lx.table.heading sortable wire:click="sortBy('status')" :direction="$sortField == 'created_at' ? $sortDirection : null">
+        </x-table.heading>
+        <x-table.heading>Email</x-table.heading>
+        <x-table.heading>Gender</x-table.heading>
+        <x-table.heading sortable wire:click="sortBy('status')" :direction="$sortField == 'created_at' ? $sortDirection : null">
         Status
-        </x-lx.table.heading>
-        <x-lx.table.heading sortable wire:click="sortBy('created_at')" :direction="$sortField == 'created_at' ? $sortDirection : null">
+        </x-table.heading>
+        <x-table.heading sortable wire:click="sortBy('created_at')" :direction="$sortField == 'created_at' ? $sortDirection : null">
         Created On
-        </x-lx.table.heading>
+        </x-table.heading>
     </x-slot>
     
     <x-slot name="body">
         @if ($users->isNotEmpty())
             @foreach ($users as $user)
-                <x-lx.table.row>
-                    <x-lx.table.cell>{{ $user->name }}</x-lx.table.cell>
-                    <x-lx.table.cell>{{ $user->email }}</x-lx.table.cell>
-                    <x-lx.table.cell>{{ str()->ucfirst($user->gender) }}</x-lx.table.cell>
-                    <x-lx.table.cell>{{ str()->ucfirst($user->status) }}</x-lx.table.cell>
-                    <x-lx.table.cell>
+                <x-table.row>
+                    <x-table.cell>{{ $user->name }}</x-table.cell>
+                    <x-table.cell>{{ $user->email }}</x-table.cell>
+                    <x-table.cell>{{ str()->ucfirst($user->gender) }}</x-table.cell>
+                    <x-table.cell>{{ str()->ucfirst($user->status) }}</x-table.cell>
+                    <x-table.cell>
                         {{ !empty($user->created_at) ? $user->created_at->diffForHumans() : '-' }}
-                    </x-lx.table.cell>
-                </x-lx.table.row>
+                    </x-table.cell>
+                </x-table.row>
             @endforeach
         @else
-            <x-lx.table.row>
-                <x-lx.table.cell colspan="5" class="text-center">No data found.</x-lx.table.cell>
-            </x-lx.table.row>
+            <x-table.row>
+                <x-table.cell colspan="5" class="text-center">No data found.</x-table.cell>
+            </x-table.row>
         @endif
     </x-slot>
 
     <x-slot name="pagination">
         {{ $users->links() }}
     </x-slot>
-</x-lx.table>
+</x-table>
 ```
 
 | :memo:        | We are using alpineJs so make sure that is added to your project.       |

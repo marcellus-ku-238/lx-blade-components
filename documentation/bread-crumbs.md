@@ -4,7 +4,7 @@ This component give you html with tailwind classes when you need to show bread-c
 
 You just need to copy below tag and paste at place you want to show bread-crumbs,
 
-```php
+```html
 <x-bread-crumbs :page="'Users'" :pageRoute="'user.index'" :subPage="'Lists'" />
 ```
 

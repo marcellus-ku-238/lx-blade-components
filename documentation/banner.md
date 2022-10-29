@@ -4,8 +4,8 @@ This component give you html with tailwind classes when you need to show flash m
 
 You just need to copy below tag and paste at place you want to show flash message,
 
-```bash
-<x-lx.action.banner type="success" autoHide="true" message="$message"/>
+```html
+<x-action.banner type="success" autoHide="true" message="$message"/>
 ```
 
 | :memo:        | We are using alpineJs so make sure that is added to your project.       |

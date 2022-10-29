@@ -38,6 +38,7 @@ List of Components:
 - [Bread-crumbs](documentation/bread-crumbs.md)
 - [Nav-link](documentation/nav-link.md)
 - [Toast](documentation/toast.md)
+- [Modal](documentation/modal.md)
 
 ## Contributers
 - [Parth Gajjar](https://github.com/marcellus-ku-238)
