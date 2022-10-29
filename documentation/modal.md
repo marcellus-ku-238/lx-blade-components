@@ -33,6 +33,5 @@ You just need to copy below tag and paste at place you want to show modal,
 |---------------|:--------------------------------------------------------------------:|
 | Positions     | `Top-left`, `Top-right`, `Bottom-left`, `Bottom-right` and `center`. |
 | Sizes         | `sm`, `md`, `lg` and `xl`                                            |
-|---------------|:--------------------------------------------------------------------:|
 
 Go to [Documentation](../README.md)
