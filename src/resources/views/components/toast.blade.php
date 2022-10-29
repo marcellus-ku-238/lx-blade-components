@@ -1,40 +1,48 @@
 @props([
-    'position' => 'center',
+    'position' => 'center-bottom',
     'svg' => true,
     'type' => 'warning',
 ])
 
-<div class="relative">
+<div>
     <div @class([
-        'absolute',
-        'top-20 right-20' => $position == 'right',
-        'top-20 left-20' => $position == 'left',
-        'top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2' =>
-            $position == 'center',
+        'fixed',
+        'top-28 right-20' => $position == 'top-right',
+        'top-28 left-20' => $position == 'top-left',
+        'bottom-28 left-20' => $position == 'bottom-left',
+        'bottom-28 right-20' => $position == 'bottom-right',
+        'top-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2' =>
+            $position == 'center-top',
+        'bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2' =>
+            $position == 'center-bottom',
     ])>
-        <div class="flex items-center w-full max-w-xs p-4 space-x-4 text-gray-500 bg-white rounded-lg shadow top-10 right-10"
-            role="alert" x-data="{ show: false, message: 'Data saved.' }" x-on:notify.window="show = true; message = $event.detail" x-show="show"
-            x-transition:enter="transition ease-in-out duration-300"
-            x-transition:enter-start="opacity-0 transform scale-x-100 -translate-y-16"
-            x-transition:enter-end="opacity-100 transform scale-x-100 translate-y-0"
-            x-transition:leave="transition ease-in-out duration-300"
-            x-transition:leave-start="opacity-100 transform scale-x-100 -translate-x-0"
-            x-transition:leave-end="opacity-0 transform scale-x-100 translate-x-16">
+        <div class="flex items-center w-full p-4 space-x-4 text-gray-500 bg-white rounded-lg shadow max-w-1/2 top-10 right-10"
+            role="alert" x-data="{ show: false, position:'top-right' ,type: 'success', message: 'Data saved.' }"
+            x-on:notify.window="show = true; message = $event.detail.message; type = $event.detail.type" x-show="show"
+            x-transition:enter="transition ease-in-out duration-300 transform"
+            x-transition:enter-start="opacity-0 -translate-y-5"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in-out duration-300 transform"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-5"
+            >
             @if (!empty($svg))
                 <div @class([
                     'inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg',
-                    'text-green-500 bg-green-100' => $type == 'success',
-                    'text-red-500 bg-red-100' => $type == 'failed',
-                    'text-blue-500 bg-blue-100' => $type == 'warning',
-                ])>
+                ])
+                    :class="{
+                        'text-green-500 bg-green-100': type == 'success',
+                        'text-red-500 bg-red-100': type == 'failed',
+                        'text-blue-500 bg-blue-100': type == 'warning',
+                    }">
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" @class([
-                            'w-6 h-6',
-                            'text-green-400' => $type == 'success',
-                            'text-red-400' => $type == 'failed',
-                            'text-blue-400' => $type == 'warning',
-                        ])>
+                        stroke="currentColor" @class(['w-6 h-6'])
+                        :class="{
+                            'text-green-400': type == 'success',
+                            'text-red-400': type == 'failed',
+                            'text-blue-400': type == 'warning',
+                        }">
                         @if ($type == 'success')
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
