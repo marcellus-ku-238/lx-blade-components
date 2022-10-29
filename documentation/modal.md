@@ -4,7 +4,7 @@ This component give you html with tailwind classes when you need to show modal t
 
 You just need to copy below tag and paste at place you want to show modal,
 
-```php
+```html
 <x-modal :position="'top-right'" :show="false">
     <x-slot name="header">
         <x-modal.header :show="true">Terms of Service</x-modal.header>
