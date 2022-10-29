@@ -10,7 +10,11 @@ You just need to copy below tag and paste at place you want to show toast-messag
 
 ## Livewire allows you to fire browser window events like so,
 ```php
-$this->dispatchBrowserEvent('notify', 'Profile saved.');
+$this->dispatchBrowserEvent('notify', [
+    'message' => 'Yuppie, Data saved.',
+    'type' => 'success',
+    'position' => 'top-right'
+]);
 ```
 
 To learn more for events in laravel-livewire go to ([Reference])(https://laravel-livewire.com/docs/2.x/events)
