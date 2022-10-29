@@ -17,7 +17,7 @@ $this->dispatchBrowserEvent('notify', [
 ]);
 ```
 
-To learn more for events in laravel-livewire go to ([Reference])(https://laravel-livewire.com/docs/2.x/events)
+To learn more for events in laravel-livewire from this [Reference](https://laravel-livewire.com/docs/2.x/events)
 
 # Demo 
 ![Image](./images/toast.gif)
