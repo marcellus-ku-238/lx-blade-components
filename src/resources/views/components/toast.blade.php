@@ -1,31 +1,26 @@
 @props([
-    'position' => 'center-bottom',
     'svg' => true,
-    'type' => 'warning',
+    'type' => 'success',
 ])
 
 <div>
-    <div @class([
-        'fixed',
-        'top-28 right-20' => $position == 'top-right',
-        'top-28 left-20' => $position == 'top-left',
-        'bottom-28 left-20' => $position == 'bottom-left',
-        'bottom-28 right-20' => $position == 'bottom-right',
-        'top-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2' =>
-            $position == 'center-top',
-        'bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2' =>
-            $position == 'center-bottom',
-    ])>
+    <div @class(['fixed'])
+        :class="{
+            'top-24 right-20': position == 'top-right',
+            'top-24 left-20': position == 'top-left',
+            'bottom-24 left-20': position == 'bottom-left',
+            'bottom-24 right-20': position == 'bottom-right',
+            'top-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2': position == 'center-top',
+            'bottom-28 left-1/2 transform -translate-x-1/2 -translate-y-1/2': position == 'center-bottom',
+        }"
+        x-data="{ show: false, type: 'success', message: 'Data saved.', position: 'top-left' }">
         <div class="flex items-center w-full p-4 space-x-4 text-gray-500 bg-white rounded-lg shadow max-w-1/2 top-10 right-10"
-            role="alert" x-data="{ show: false, position:'top-right' ,type: 'success', message: 'Data saved.' }"
-            x-on:notify.window="show = true; message = $event.detail.message; type = $event.detail.type" x-show="show"
-            x-transition:enter="transition ease-in-out duration-300 transform"
-            x-transition:enter-start="opacity-0 -translate-y-5"
-            x-transition:enter-end="opacity-100 translate-y-0"
+            role="alert"
+            x-on:notify.window="show = true; message = $event.detail.message; type = $event.detail.type; position = $event.detail.position ?? 'top-right'; console.log($event.detail)"
+            x-show="show" x-transition:enter="transition ease-in-out duration-300 transform"
+            x-transition:enter-start="opacity-0 -translate-y-5" x-transition:enter-end="opacity-100 translate-y-0"
             x-transition:leave="transition ease-in-out duration-300 transform"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 -translate-y-5"
-            >
+            x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-5">
             @if (!empty($svg))
                 <div @class([
                     'inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg',
@@ -58,7 +53,7 @@
                     </svg>
                 </div>
             @endif
-            <div x-text="message" class="ml-3 text-sm font-normal"></div>
+            <div x-text="message" class="ml-3 text-sm font-extrabold text-gray-400"></div>
             <button type="button" x-on:click="show = false"
                 class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 "
                 data-dismiss-target="#toast-default" aria-label="Close">
