@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace MarcellusKu238\LxBladeComponents\Providers;
+namespace ParthVadgama\LxBladeComponents\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
-use MarcellusKu238\LxBladeComponents\Console\Commands\InstallCommand;
+use ParthVadgama\LxBladeComponents\Console\Commands\InstallCommand;
 
 class LxBladeComponentsServiceProvider extends ServiceProvider
 {

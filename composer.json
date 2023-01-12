@@ -1,5 +1,5 @@
 {
-    "name": "marcellus-ku-238/lx-blade-components",
+    "name": "parth-vadgama/lx-blade-components",
     "description": "Laravel x-blade components is a component library built to support livewire and tailwind based project.",
     "keywords": [
         "laravel",
@@ -8,26 +8,26 @@
         "blade-components",
         "x-blade-components"
     ],
-    "homepage": "https://github.com/marcellus-ku-238/lx-blade-components",
+    "homepage": "https://github.com/parth-vadgama/lx-blade-components",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "MarcellusKu238\\LxBladeComponents\\": "src/"
+            "ParthVadgama\\LxBladeComponents\\": "src/"
         }
     },
     "authors": [
         {
             "name": "Parth Gajjar",
             "email": "gajjar.parth1811@gmail.com",
-            "homepage": "https://github.com/marcellus-ku-238",
+            "homepage": "https://github.com/parth-vadgama",
             "role": "Developer"
         }
     ],
     "extra": {
         "laravel": {
             "providers": [
-                "MarcellusKu238\\LxBladeComponents\\Providers\\LxBladeComponentsServiceProvider"
+                "ParthVadgama\\LxBladeComponents\\Providers\\LxBladeComponentsServiceProvider"
             ]
         }
     },
